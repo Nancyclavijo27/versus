@@ -1,14 +1,22 @@
 import React from 'react'
 import Search from "./Search";
 import Random from "./Random";
+import Button from "@mui/material/Button";
+import "./NavBar.css";
 
 
-export default function NavBar() {
+export default function NavBar({search,addList,random}) {//paso el destructurin las propiedades que voy a mostrar en los componentes que estan dentro del nav
+  
+  //el boton onclik ejecuta la funcion addList que biene del home 
   return (
-    <div>
-      <h2>Navbar</h2>
-      <Search/>
-      <Random/>
-    </div>
+    <div className="navBar">
+    <Search search={search} cardLocation="left"/>
+    <Random random={random} cardLocation="left"/>
+
+    <Button variant="contained" color="error" onClick={addList}>All Characters</Button>
+
+    <Search search={search} cardLocation="right"/>
+    <Random random={random} cardLocation="right"/>
+  </div>
   )
 }
