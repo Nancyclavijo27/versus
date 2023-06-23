@@ -13,7 +13,7 @@ export default function NavBar({search,addList,random}) {//paso el destructurin 
     <Search search={search} cardLocation="left"/>
     <Random random={random} cardLocation="left"/>
 
-    <Button variant="contained" color="error" onClick={addList}>All Characters</Button>
+    <Button variant="contained" color="secondary" onClick={addList}>All Characters</Button>
 
     <Search search={search} cardLocation="right"/>
     <Random random={random} cardLocation="right"/>
